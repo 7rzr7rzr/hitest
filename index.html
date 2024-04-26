@@ -1,16 +1,211 @@
-<html> 
+<!DOCTYPE html>
+<html>
     <head>
-        <title> OSS class 5 </title>
-    </head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title> #private space of GA-IN </title>
+        <style>   
+            body {
+                background-color: #f4f4f4;
+                font-family: Arial, sans-serif;
+            } 
 
+            h1 {
+                text-align: Center;
+                font-size: 2.5rem;
+                font-family: Arial, sans-serif;
+                cursor: pointer;
+                color: #4280dc;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                letter-spacing: 1.5px;
+            }
+
+            ul {
+                text-align: center;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                display: inline-block;
+                margin: 0 10px;
+                font-family: Arial, sans-serif;
+            }
+
+            li a {
+                display: block; 
+                text-decoration: none; 
+                color: #333; 
+                font-size: 30px;
+            }
+            
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                gap: 20px;
+              }
+              
+            .video-container {
+                flex: 1;
+                max-width: 45%;
+                background-color: #ddd; /* Placeholder for video background */
+                position: relative;
+                padding-top: 25%; /* This sets a 4:3 aspect ratio */
+              }
+              
+            .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+              
+            .text-content {
+                flex: 1;
+                max-width: 45%;
+                font-family: Arial, sans-serif; /* 폰트 설정 */
+                color: #333; /* 기본 텍스트 색상 */
+                background-color: #f4f4f4; /* 배경 색상 */
+            }
+            
+            .text-content p {
+                font-size: 20px; /* 기본 텍스트 크기 */
+                line-height: 1.6; /* 줄 간격 */
+                margin-bottom: 20px; /* 단락 아래 여백 */
+            }
+            
+            .highlight {
+                color: #ff78b0; /* 링크 색상 */
+                text-decoration: none; /* 밑줄 제거 */
+                font-weight: bold; /* 글자 굵게 */
+            }
+            
+            .highlight:hover {
+                text-decoration: underline; /* 링크 위에 마우스를 올렸을 때 밑줄 */
+                color: #b3c8ff; /* 호버 상태의 색상 변경 */
+            }
+            
+            .footer {
+                background-color: #333; 
+                color: white;
+                padding: 10px 0;
+                font-size: 16px;
+            }
+            
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10%;
+            }
+            
+            .contact-info p {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            
+            .contact-info a {
+                color: white;
+                text-decoration: none;
+                margin-right: 10px;
+            }
+            
+            .social-media a {
+                display: inline-block;
+                width: 24px; /* or the size you prefer */
+                height: 24px; /* or the size you prefer */
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            .social-icon {
+                margin-top: 10px;
+                width: 24px;
+                height: 24px;
+            }            
+            
+            .footer-bottom {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .footer-bottom p {
+                text-align: center;
+            }
+        </style>
+    </head>
     <body>
-        <h1>1: hihi, GA-IN! </h1>
-        <h1>2: This is test. </h1>
-        <h1>3: this is protection rule test. 
-                I'll push this code to main branch.
-                then,.. maybe error 
-                then I will push this code to master branch 
-                and then compare & pull request."></main>
-        </h1>
+        <h1 onclick="goToHomePage()"> 지극히 개인적인 가인이의 공간 </h1>
+        
+        <ul>
+            <li><a href = "About.html"> 프로필 </a></li>
+            <li><a href = "myWorkHistory.html"> 이력사항 </a></li>
+            <li><a href = "Photograph.html"> 사진모음집 </a></li>
+            <li><a href = "Video.html"> 영상모음집 </a></li>
+        </ul>
+
+        <br><br>
+
+        <main class="container">
+            <div class="content">
+              <div class="video-container">
+                <video autoplay muted loop>
+                  <source src="source/video/Suzume.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="text-content">
+                <section id="intro">
+                  <p> 안녕하세요. <a href="about.html" class="highlight">김가인</a> 입니다.
+                    이곳은 제가 어떤 사람인지 보여드리기 위한 공간입니다. 
+                    저는 사이버 보안을 전공 중인 학생입니다. <a href="myWorkHistory.html" class="highlight">보안과 약간의 개발</a>을 공부하고 있습니다. 
+                    하지만 제 적성에 맞는 것 같지 않아서 제가 좋아하는 것을 찾아보며 진로 방향을 고민하고 있습니다.
+                    따라서 이곳은 저를 찾아가는 과정을 시각화 한 공간이라고 생각하시면 될 것 같습니다.
+                    제가 좋아하는 것은 <a href="Photograph.html" class="highlight">사진 촬영</a>과 <a href="Video.html" class="highlight">영상 촬영</a>입니다. 
+                    사진과 영상을 통해 다시는 돌아오지 않을 현재의 순간들을 기록하는 것은 제게 매우 가치있는 일입니다. 또한, 저는 애니메이션과 여행을 좋아합니다. 
+                    제가 기록한 사진과 영상에는 여행지와 애니메이션 배경지 등 제가 좋아하는 것들이 녹아있습니다. 많은 관심과 감상 바랍니다. </p>
+                </section>
+              </div>
+            </div>
+          </main>
+
+          <br><br>
+
+        <script> 
+            function goToHomePage() {
+                window.location.href = "index.html";
+            }
+
+        </script>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p> Contact me </p>
+                    <a href="mailto:crocoberry1603@naver.com">crocoberry1603@naver.com </a> | <a> Tel: 010-1234-1004 </a>
+                    <div class="social-media">
+                        <a href="https://open.kakao.com/o/sDPkpmlg" target="_blank"><img src="C:\Users\82107\Desktop\image\kakao_icon.png" class="social-icon"></a>
+                        <a href="https://www.instagram.com/7rzr7rzr?igsh=MmVzYnVuN2lqbDd3&utm_source=qr" target="_blank"><img src="C:\Users\82107\Desktop\image\instagram_icon.png" class="social-icon"></a>
+                        <a href="https://github.com/7rzr7rzr" target="_blank"><img src="C:\Users\82107\Desktop\image\github_icon.png" class="social-icon"></a>
+                        <a href="https://debuggerworld.tistory.com/" target="_blank"><img src="C:\Users\82107\Desktop\image\tistory_icon.png" alt="Tistory" class="social-icon"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> © 2024. GA-IN KIM All rights reserved. </p>
+            </div>
+        </footer>
     </body>
 </html>
